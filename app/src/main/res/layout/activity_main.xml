@@ -2,48 +2,38 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="SkinAttr"
-            type="com.lh.changeskinfordatabinding.entety.SkinAttr" />
-
-        <variable
-            name="presenter"
-            type="com.lh.changeskinfordatabinding.MainActivity.Presenter" />
-    </data>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@{SkinAttr.intBackgroundRes.get()}"
-            android:text="@{SkinAttr.str.get()}"
-            android:textColor="@{SkinAttr.intTextColorRes.get()}"
-            android:textSize="22sp" />
-
         <Button
+            android:id="@+id/btn_red"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{(theview)->presenter.onClick(theview,1)}"
-            android:text="@string/skin_yellow" />
+            android:onClick="onClick"
+            android:text="@string/skin_red" />
 
         <Button
+            android:id="@+id/btn_blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{(theview)->presenter.onClick(theview,2)}"
+            android:onClick="onClick"
             android:text="@string/skin_blue" />
 
         <Button
+            android:id="@+id/btn_default"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{(theview)->presenter.onClick(theview,3)}"
+            android:onClick="onClick"
             android:text="@string/skin_default" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
     </LinearLayout>
 </layout>
 

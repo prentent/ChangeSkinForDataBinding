@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="SkinAttr"
+            type="com.lh.changeskinfordatabinding.entety.SkinAttr" />
+
+        <variable
+            name="User"
+            type="com.lh.changeskinfordatabinding.entety.User" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{SkinAttr.intBackgroundRes}"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{User.name}"
+                android:textColor="@{SkinAttr.intTextColorRes}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{User.age}"
+                android:textColor="@{SkinAttr.intTextColorRes}" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
+
