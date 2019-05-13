@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--背景色-->
+    <color name="skin_background_red">#D81B60</color>
+    <color name="skin_background_blue">#7bbfea</color>
+    <color name="skin_background_default">#00ae9d</color>
+
+    <!--字体色-->
+    <color name="skin_color_white">#ffffff</color>
+    <color name="skin_color_black">#000000</color>
+</resources>
